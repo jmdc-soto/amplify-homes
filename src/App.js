@@ -6,6 +6,7 @@ import {
 function App() {
   return (
     <div className="App">
+      aaa
       <MyIcon />
     </div>
   );
