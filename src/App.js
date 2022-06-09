@@ -1,12 +1,12 @@
 import './App.css';
 import { 
-  EditProfile 
+  MyIcon 
 } from './ui-components';
 
 function App() {
   return (
     <div className="App">
-      <EditProfile />
+      <MyIcon />
     </div>
   );
 }
