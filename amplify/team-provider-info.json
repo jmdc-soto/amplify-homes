@@ -1,22 +1,4 @@
 {
-  "dev": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-amplifyhomes-dev-154313-authRole",
-      "UnauthRoleArn": "arn:aws:iam::040586726023:role/amplify-amplifyhomes-dev-154313-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::040586726023:role/amplify-amplifyhomes-dev-154313-authRole",
-      "Region": "ap-northeast-1",
-      "DeploymentBucketName": "amplify-amplifyhomes-dev-154313-deployment",
-      "UnauthRoleName": "amplify-amplifyhomes-dev-154313-unauthRole",
-      "StackName": "amplify-amplifyhomes-dev-154313",
-      "StackId": "arn:aws:cloudformation:ap-northeast-1:040586726023:stack/amplify-amplifyhomes-dev-154313/1b5254a0-e62d-11ec-a0d4-0ef0e6faf01f",
-      "AmplifyAppId": "d6nc6btx4y2mu"
-    },
-    "categories": {
-      "auth": {
-        "amplifyhomes39412e75": {}
-      }
-    }
-  },
   "staging": {
     "awscloudformation": {
       "AuthRoleName": "amplify-soto-staging-21748-authRole",
@@ -28,6 +10,24 @@
       "StackName": "amplify-soto-staging-21748",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:040586726023:stack/amplify-soto-staging-21748/a9cf8890-e7b5-11ec-9966-06d700fe3cbb",
       "AmplifyAppId": "d19kmjkyhsjlwy"
+    },
+    "categories": {
+      "auth": {
+        "amplifyhomes39412e75": {}
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyhomes-dev-154313-authRole",
+      "UnauthRoleArn": "arn:aws:iam::040586726023:role/amplify-amplifyhomes-dev-154313-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::040586726023:role/amplify-amplifyhomes-dev-154313-authRole",
+      "Region": "ap-northeast-1",
+      "DeploymentBucketName": "amplify-amplifyhomes-dev-154313-deployment",
+      "UnauthRoleName": "amplify-amplifyhomes-dev-154313-unauthRole",
+      "StackName": "amplify-amplifyhomes-dev-154313",
+      "StackId": "arn:aws:cloudformation:ap-northeast-1:040586726023:stack/amplify-amplifyhomes-dev-154313/1b5254a0-e62d-11ec-a0d4-0ef0e6faf01f",
+      "AmplifyAppId": "d6nc6btx4y2mu"
     },
     "categories": {
       "auth": {
