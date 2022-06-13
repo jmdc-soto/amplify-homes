@@ -1,12 +1,12 @@
 import './App.css';
 import { 
-  MyIcon , EditProfile
+  MyIcon , Input
 } from './ui-components';
 
 function App() {
   return (
     <div className="App">
-      <EditProfile />
+      <Input />
       aaa
       <MyIcon />
     </div>
