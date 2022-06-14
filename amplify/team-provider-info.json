@@ -9,12 +9,23 @@
       "UnauthRoleName": "amplify-soto-staging-21748-unauthRole",
       "StackName": "amplify-soto-staging-21748",
       "StackId": "arn:aws:cloudformation:ap-northeast-1:040586726023:stack/amplify-soto-staging-21748/a9cf8890-e7b5-11ec-9966-06d700fe3cbb",
-      "AmplifyAppId": "d19kmjkyhsjlwy"
+      "AmplifyAppId": "d19kmjkyhsjlwy",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-soto-staging-21748-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
     },
     "categories": {
       "auth": {
         "amplifyhomes39412e75": {},
         "sotoc68418d3": {}
+      },
+      "function": {
+        "sotoc60dac14": {
+          "deploymentBucketName": "amplify-soto-staging-21748-deployment",
+          "s3Key": "amplify-builds/sotoc60dac14-4173597244764168656c-build.zip"
+        },
+        "fncSoto": {
+          "deploymentBucketName": "amplify-soto-staging-21748-deployment",
+          "s3Key": "amplify-builds/fncSoto-33325a6e4f6237725744-build.zip"
+        }
       }
     }
   },
