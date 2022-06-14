@@ -1,15 +1,18 @@
 import './App.css';
-import { 
-  MyIcon , Input
-} from './ui-components';
+
+import { Authenticator } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
 function App() {
   return (
-    <div className="App">
-      <Input />
-      aaa
-      <MyIcon />
-    </div>
+    <Authenticator>
+      {({ signOut, user }) => (
+        <div className='App'>
+          <h1>Hello {user.username}</h1>
+          <button onClick={signOut}>Sign Out</button>
+        </div>
+      )}
+    </Authenticator>
   );
 }
 
