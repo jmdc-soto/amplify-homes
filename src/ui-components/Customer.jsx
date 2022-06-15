@@ -13,7 +13,6 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { CUSTOMER } from "../models";
 import { schema } from "../models/schema";
-import { useEffect } from "react";
 import { TextField, View } from "@aws-amplify/ui-react";
 export default function Customer(props) {
   const { customer, overrides, ...rest } = props;
@@ -33,22 +32,6 @@ export default function Customer(props) {
     model: CUSTOMER,
     schema: schema,
   });
-  useEffect(() => {
-    if (
-      textFieldThreeTwoOneThreeTwoSevenZeroOneValue === "" &&
-      customer !== undefined &&
-      customer?.name !== undefined
-    )
-      setTextFieldThreeTwoOneThreeTwoSevenZeroOneValue(customer?.name);
-  }, [customer]);
-  useEffect(() => {
-    if (
-      textFieldThreeTwoOneThreeTwoSevenOneFiveValue === "" &&
-      customer !== undefined &&
-      customer?.other !== undefined
-    )
-      setTextFieldThreeTwoOneThreeTwoSevenOneFiveValue(customer?.other);
-  }, [customer]);
   return (
     <View
       width="1235px"
@@ -101,7 +84,6 @@ export default function Customer(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={customer?.id}
         {...getOverrideProps(overrides, "TextField32132708")}
       ></TextField>
       <TextField
