@@ -1,5 +1,14 @@
+type URL @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  URL: AWSURL
+  CUSTOMERS: [CUSTOMER] @hasMany(indexName: "byURL", fields: ["id"])
+}
+
 type CUSTOMER @model @auth(rules: [{allow: public}]) {
   id: ID!
   name: String
   other: String
+  payload: AWSJSON
+  urlID: ID! @index(name: "byURL")
 }
+ 

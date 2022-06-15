@@ -8,41 +8,24 @@
 import React from "react";
 import {
   getOverrideProps,
-  useDataStoreCreateAction,
-  useStateMutationAction,
+  useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
-import { CUSTOMER } from "../models";
-import { schema } from "../models/schema";
-import { TextField, View } from "@aws-amplify/ui-react";
+import { Button, TextField, View } from "@aws-amplify/ui-react";
 export default function Customer(props) {
-  const { overrides, ...rest } = props;
-  const [
-    textFieldThreeTwoOneThreeTwoSevenZeroOneValue,
-    setTextFieldThreeTwoOneThreeTwoSevenZeroOneValue,
-  ] = useStateMutationAction("");
-  const [
-    textFieldThreeTwoOneThreeTwoSevenOneFiveValue,
-    setTextFieldThreeTwoOneThreeTwoSevenOneFiveValue,
-  ] = useStateMutationAction("");
-  const customerOnClick = useDataStoreCreateAction({
-    fields: {
-      name: textFieldThreeTwoOneThreeTwoSevenZeroOneValue,
-      other: textFieldThreeTwoOneThreeTwoSevenOneFiveValue,
-    },
-    model: CUSTOMER,
-    schema: schema,
+  const { cUSTOMER, uRL, overrides, ...rest } = props;
+  const buttonThreeTwoOneFiveTwoSevenZeroZeroOnClick = useNavigateAction({
+    target: "_blank",
+    type: "url",
+    url: "",
   });
   return (
     <View
-      width="1235px"
-      height="564px"
+      width="489px"
+      height="468px"
       overflow="hidden"
       position="relative"
       padding="0px 0px 0px 0px"
       backgroundColor="rgba(255,255,255,1)"
-      onClick={() => {
-        customerOnClick();
-      }}
       {...rest}
       {...getOverrideProps(overrides, "Customer")}
     >
@@ -62,10 +45,7 @@ export default function Customer(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={textFieldThreeTwoOneThreeTwoSevenZeroOneValue}
-        onChange={(event) => {
-          setTextFieldThreeTwoOneThreeTwoSevenZeroOneValue(event.target.value);
-        }}
+        value={cUSTOMER?.name}
         {...getOverrideProps(overrides, "TextField32132701")}
       ></TextField>
       <TextField
@@ -84,6 +64,7 @@ export default function Customer(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
+        value={uRL?.URL}
         {...getOverrideProps(overrides, "TextField32132708")}
       ></TextField>
       <TextField
@@ -102,12 +83,42 @@ export default function Customer(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={textFieldThreeTwoOneThreeTwoSevenOneFiveValue}
-        onChange={(event) => {
-          setTextFieldThreeTwoOneThreeTwoSevenOneFiveValue(event.target.value);
-        }}
+        value={cUSTOMER?.other}
         {...getOverrideProps(overrides, "TextField32132715")}
       ></TextField>
+      <Button
+        display="flex"
+        gap="0"
+        position="absolute"
+        top="375px"
+        left="98px"
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        size="large"
+        isDisabled={false}
+        variation="primary"
+        children="ぼたん"
+        onClick={() => {
+          buttonThreeTwoOneFiveTwoSevenZeroZeroOnClick();
+        }}
+        {...getOverrideProps(overrides, "Button32152700")}
+      ></Button>
+      <Button
+        display="flex"
+        gap="0"
+        position="absolute"
+        top="22px"
+        right="20px"
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        size="default"
+        isDisabled={false}
+        variation="primary"
+        children="X"
+        {...getOverrideProps(overrides, "Button32162713")}
+      ></Button>
     </View>
   );
 }

@@ -5,13 +5,13 @@
  **************************************************************************/
 
 import React from "react";
+import { CUSTOMER } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { CUSTOMER, URL } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
-export declare type CustomerProps = React.PropsWithChildren<Partial<ViewProps> & {
+export declare type CustomerListProps = React.PropsWithChildren<Partial<ViewProps> & {
+    customer?: String;
     cUSTOMER?: CUSTOMER;
-    uRL?: URL;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
-export default function Customer(props: CustomerProps): React.ReactElement;
+export default function CustomerList(props: CustomerListProps): React.ReactElement;
