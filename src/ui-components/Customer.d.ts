@@ -6,11 +6,8 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { CUSTOMER } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type CustomerProps = React.PropsWithChildren<Partial<ViewProps> & {
-    customer?: CUSTOMER;
-} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function Customer(props: CustomerProps): React.ReactElement;

@@ -15,7 +15,7 @@ import { CUSTOMER } from "../models";
 import { schema } from "../models/schema";
 import { TextField, View } from "@aws-amplify/ui-react";
 export default function Customer(props) {
-  const { customer, overrides, ...rest } = props;
+  const { overrides, ...rest } = props;
   const [
     textFieldThreeTwoOneThreeTwoSevenZeroOneValue,
     setTextFieldThreeTwoOneThreeTwoSevenZeroOneValue,

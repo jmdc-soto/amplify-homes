@@ -5,6 +5,7 @@
  **************************************************************************/
 
 export { default as HeroLayout2 } from "./HeroLayout2";
+export { default as Customer } from "./Customer";
 export { default as MarketingPricing } from "./MarketingPricing";
 export { default as ItemCard } from "./ItemCard";
 export { default as Input } from "./Input";
