@@ -1,7 +1,7 @@
 export const schema = {
     "models": {
-        "Home": {
-            "name": "Home",
+        "CUSTOMER": {
+            "name": "CUSTOMER",
             "fields": {
                 "id": {
                     "name": "id",
@@ -10,24 +10,17 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "address": {
-                    "name": "address",
+                "name": {
+                    "name": "name",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
                     "attributes": []
                 },
-                "image_url": {
-                    "name": "image_url",
+                "other": {
+                    "name": "other",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "price": {
-                    "name": "price",
-                    "isArray": false,
-                    "type": "Float",
                     "isRequired": false,
                     "attributes": []
                 },
@@ -49,7 +42,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "Homes",
+            "pluralName": "CUSTOMERS",
             "attributes": [
                 {
                     "type": "model",
@@ -76,5 +69,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "abb6f204998ef8932ab6c6fbd372dbd2"
+    "version": "5a000b6ab92712d85885084f59af9d2b"
 };

@@ -20,11 +20,11 @@
       "function": {
         "sotoc60dac14": {
           "deploymentBucketName": "amplify-soto-staging-21748-deployment",
-          "s3Key": "amplify-builds/sotoc60dac14-4173597244764168656c-build.zip"
+          "s3Key": "amplify-builds/sotoc60dac14-2f4a704242666e764870-build.zip"
         },
         "fncSoto": {
           "deploymentBucketName": "amplify-soto-staging-21748-deployment",
-          "s3Key": "amplify-builds/fncSoto-33325a6e4f6237725744-build.zip"
+          "s3Key": "amplify-builds/fncSoto-43713956485159784d41-build.zip"
         }
       }
     }
