@@ -11,7 +11,6 @@ import {
   EditProfile 
 } from './ui-components';
 
-
 Amplify.configure(awsconfig);
 
 ReactDOM.render(

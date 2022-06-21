@@ -47,12 +47,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "fncSoto",
+            "fncTest",
             {
               "Fn::Join": [
                 "",
                 [
-                  "fncSoto",
+                  "fncTest",
                   "-",
                   {
                     "Ref": "env"
@@ -89,12 +89,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "sotoLambdaRoled16d74c6",
+            "sotoLambdaRole41e8cc75",
             {
               "Fn::Join": [
                 "",
                 [
-                  "sotoLambdaRoled16d74c6",
+                  "sotoLambdaRole41e8cc75",
                   "-",
                   {
                     "Ref": "env"

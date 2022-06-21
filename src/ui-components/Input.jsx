@@ -8,54 +8,129 @@
 import React from "react";
 import {
   getOverrideProps,
-  getOverridesFromVariants,
-  mergeVariantsAndOverrides,
+  useDataStoreCreateAction,
+  useStateMutationAction,
 } from "@aws-amplify/ui-react/internal";
-import { Flex, Text } from "@aws-amplify/ui-react";
+import { Customer } from "../models";
+import { schema } from "../models/schema";
+import { Button, TextField, View } from "@aws-amplify/ui-react";
 export default function Input(props) {
-  const { overrides: overridesProp, ...rest } = props;
-  const variants = [
-    {
-      overrides: { tekitounatekisuto: {}, Input: {} },
-      variantValues: { property1: "Default" },
+  const { overrides, ...rest } = props;
+  const [
+    textFieldThreeTwoThreeZeroTwoSevenFourTwoValue,
+    setTextFieldThreeTwoThreeZeroTwoSevenFourTwoValue,
+  ] = useStateMutationAction("");
+  const [
+    textFieldThreeTwoThreeZeroTwoSevenFiveSixValue,
+    setTextFieldThreeTwoThreeZeroTwoSevenFiveSixValue,
+  ] = useStateMutationAction("");
+  const [
+    textFieldThreeTwoThreeZeroTwoSevenFourNineValue,
+    setTextFieldThreeTwoThreeZeroTwoSevenFourNineValue,
+  ] = useStateMutationAction("");
+  const buttonOnClick = useDataStoreCreateAction({
+    fields: {
+      num: textFieldThreeTwoThreeZeroTwoSevenFourTwoValue,
+      name: textFieldThreeTwoThreeZeroTwoSevenFiveSixValue,
+      url: textFieldThreeTwoThreeZeroTwoSevenFourNineValue,
     },
-  ];
-  const overrides = mergeVariantsAndOverrides(
-    getOverridesFromVariants(variants, props),
-    overridesProp || {}
-  );
+    model: Customer,
+    schema: schema,
+  });
   return (
-    <Flex
-      gap="10px"
-      direction="row"
-      width="517px"
-      height="66px"
-      alignItems="flex-start"
+    <View
+      width="475px"
+      height="548px"
+      overflow="hidden"
       position="relative"
-      border="1px SOLID rgba(0,0,0,1)"
-      borderRadius="15px"
-      padding="10px 9px 9px 9px"
-      backgroundColor="rgba(255,223,223,1)"
+      padding="0px 0px 0px 0px"
+      backgroundColor="rgba(255,255,255,1)"
       {...rest}
       {...getOverrideProps(overrides, "Input")}
     >
-      <Text
-        fontFamily="Inter"
-        fontSize="12px"
-        fontWeight="400"
-        color="rgba(0,0,0,1)"
-        lineHeight="14.0625px"
-        textAlign="left"
+      <TextField
         display="flex"
+        position="absolute"
+        top="69px"
+        left="40px"
         direction="column"
-        justifyContent="flex-start"
-        shrink="0"
-        position="relative"
+        width="300px"
+        justifyContent="center"
         padding="0px 0px 0px 0px"
-        whiteSpace="pre-wrap"
-        children="tekitounatekisuto"
-        {...getOverrideProps(overrides, "tekitounatekisuto")}
-      ></Text>
-    </Flex>
+        label="顧客番号"
+        placeholder="Placeholder"
+        size="large"
+        isDisabled={false}
+        labelHidden={false}
+        variation="default"
+        value={textFieldThreeTwoThreeZeroTwoSevenFourTwoValue}
+        onChange={(event) => {
+          setTextFieldThreeTwoThreeZeroTwoSevenFourTwoValue(event.target.value);
+        }}
+        {...getOverrideProps(overrides, "TextField32302742")}
+      ></TextField>
+      <TextField
+        display="flex"
+        position="absolute"
+        top="205px"
+        left="40px"
+        direction="column"
+        width="300px"
+        justifyContent="center"
+        padding="0px 0px 0px 0px"
+        label="顧客名称"
+        placeholder="Placeholder"
+        size="large"
+        isDisabled={false}
+        labelHidden={false}
+        variation="default"
+        value={textFieldThreeTwoThreeZeroTwoSevenFiveSixValue}
+        onChange={(event) => {
+          setTextFieldThreeTwoThreeZeroTwoSevenFiveSixValue(event.target.value);
+        }}
+        {...getOverrideProps(overrides, "TextField32302756")}
+      ></TextField>
+      <TextField
+        display="flex"
+        position="absolute"
+        top="341px"
+        left="40px"
+        direction="column"
+        width="300px"
+        justifyContent="center"
+        padding="0px 0px 0px 0px"
+        label="URL"
+        placeholder="Placeholder"
+        size="large"
+        isDisabled={false}
+        labelHidden={false}
+        variation="default"
+        value={textFieldThreeTwoThreeZeroTwoSevenFourNineValue}
+        onChange={(event) => {
+          setTextFieldThreeTwoThreeZeroTwoSevenFourNineValue(
+            event.target.value
+          );
+        }}
+        {...getOverrideProps(overrides, "TextField32302749")}
+      ></TextField>
+      <Button
+        display="flex"
+        gap="0"
+        position="absolute"
+        bottom="34px"
+        right="44px"
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        size="large"
+        isDisabled={false}
+        variation="primary"
+        children="登録"
+        onClick={() => {
+          buttonOnClick();
+        }}
+        {...getOverrideProps(overrides, "Button")}
+      ></Button>
+    </View>
   );
 }

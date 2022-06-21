@@ -4,32 +4,31 @@ import { ModelInit, MutableModel, PersistentModelConstructor } from "@aws-amplif
 
 
 
-type URLMetaData = {
+type CustomerMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-type CUSTOMERMetaData = {
+type TodoMetaData = {
   readOnlyFields: 'createdAt' | 'updatedAt';
 }
 
-export declare class URL {
+export declare class Customer {
   readonly id: string;
-  readonly URL?: string | null;
-  readonly CUSTOMERS?: (CUSTOMER | null)[] | null;
-  readonly createdAt?: string | null;
-  readonly updatedAt?: string | null;
-  constructor(init: ModelInit<URL, URLMetaData>);
-  static copyOf(source: URL, mutator: (draft: MutableModel<URL, URLMetaData>) => MutableModel<URL, URLMetaData> | void): URL;
-}
-
-export declare class CUSTOMER {
-  readonly id: string;
+  readonly num?: number | null;
   readonly name?: string | null;
-  readonly other?: string | null;
-  readonly payload?: string | null;
-  readonly urlID: string;
+  readonly url?: string | null;
   readonly createdAt?: string | null;
   readonly updatedAt?: string | null;
-  constructor(init: ModelInit<CUSTOMER, CUSTOMERMetaData>);
-  static copyOf(source: CUSTOMER, mutator: (draft: MutableModel<CUSTOMER, CUSTOMERMetaData>) => MutableModel<CUSTOMER, CUSTOMERMetaData> | void): CUSTOMER;
+  constructor(init: ModelInit<Customer, CustomerMetaData>);
+  static copyOf(source: Customer, mutator: (draft: MutableModel<Customer, CustomerMetaData>) => MutableModel<Customer, CustomerMetaData> | void): Customer;
+}
+
+export declare class Todo {
+  readonly id: string;
+  readonly name: string;
+  readonly description?: string | null;
+  readonly createdAt?: string | null;
+  readonly updatedAt?: string | null;
+  constructor(init: ModelInit<Todo, TodoMetaData>);
+  static copyOf(source: Todo, mutator: (draft: MutableModel<Todo, TodoMetaData>) => MutableModel<Todo, TodoMetaData> | void): Todo;
 }

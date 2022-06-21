@@ -1,14 +1,13 @@
-type URL @model @auth(rules: [{allow: public}]) {
+type Customer @model @auth(rules: [{allow: public}]) {
   id: ID!
-  URL: AWSURL
-  CUSTOMERS: [CUSTOMER] @hasMany(indexName: "byURL", fields: ["id"])
+  num: Int
+  name: String
+  url: String
 }
 
-type CUSTOMER @model @auth(rules: [{allow: public}]) {
+type Todo @model @auth(rules: [{allow: public}]) {
   id: ID!
-  name: String
-  other: String
-  payload: AWSJSON
-  urlID: ID! @index(name: "byURL")
+  name: String!
+  description: String
 }
  

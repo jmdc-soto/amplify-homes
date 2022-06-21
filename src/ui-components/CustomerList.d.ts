@@ -5,8 +5,8 @@
  **************************************************************************/
 
 import React from "react";
-import { CUSTOMER } from "../models";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { CUSTOMER } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type CustomerListProps = React.PropsWithChildren<Partial<ViewProps> & {
     customer?: String;

@@ -18,13 +18,9 @@
         "sotoc68418d3": {}
       },
       "function": {
-        "sotoc60dac14": {
+        "fncTest": {
           "deploymentBucketName": "amplify-soto-staging-21748-deployment",
-          "s3Key": "amplify-builds/sotoc60dac14-2f4a704242666e764870-build.zip"
-        },
-        "fncSoto": {
-          "deploymentBucketName": "amplify-soto-staging-21748-deployment",
-          "s3Key": "amplify-builds/fncSoto-43713956485159784d41-build.zip"
+          "s3Key": "amplify-builds/fncTest-6c2f456b64514f435033-build.zip"
         }
       }
     }

@@ -6,10 +6,14 @@
 
 /* eslint-disable */
 import React from "react";
-import { getOverrideProps } from "@aws-amplify/ui-react/internal";
+import {
+  getOverrideProps,
+  useNavigateAction,
+} from "@aws-amplify/ui-react/internal";
 import { Button, Radio, View } from "@aws-amplify/ui-react";
 export default function CustomerList(props) {
   const { customer, cUSTOMER, overrides, ...rest } = props;
+  const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <View
       width="522px"
@@ -51,6 +55,9 @@ export default function CustomerList(props) {
         isDisabled={false}
         variation="primary"
         children="Go"
+        onClick={() => {
+          buttonOnClick();
+        }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
     </View>

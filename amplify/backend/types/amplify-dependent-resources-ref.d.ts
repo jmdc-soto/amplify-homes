@@ -11,13 +11,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "function": {
-        "fncSoto": {
-            "Name": "string",
-            "Arn": "string",
-            "Region": "string",
-            "LambdaExecutionRole": "string"
-        },
-        "sotoc60dac14": {
+        "fncTest": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
@@ -25,11 +19,6 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "api": {
-        "api15bf7946": {
-            "RootUrl": "string",
-            "ApiName": "string",
-            "ApiId": "string"
-        },
         "soto": {
             "GraphQLAPIKeyOutput": "string",
             "GraphQLAPIIdOutput": "string",

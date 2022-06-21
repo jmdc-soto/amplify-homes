@@ -1,7 +1,7 @@
 export const schema = {
     "models": {
-        "URL": {
-            "name": "URL",
+        "Customer": {
+            "name": "Customer",
             "fields": {
                 "id": {
                     "name": "id",
@@ -10,26 +10,26 @@ export const schema = {
                     "isRequired": true,
                     "attributes": []
                 },
-                "URL": {
-                    "name": "URL",
+                "num": {
+                    "name": "num",
                     "isArray": false,
-                    "type": "AWSURL",
+                    "type": "Int",
                     "isRequired": false,
                     "attributes": []
                 },
-                "CUSTOMERS": {
-                    "name": "CUSTOMERS",
-                    "isArray": true,
-                    "type": {
-                        "model": "CUSTOMER"
-                    },
+                "name": {
+                    "name": "name",
+                    "isArray": false,
+                    "type": "String",
                     "isRequired": false,
-                    "attributes": [],
-                    "isArrayNullable": true,
-                    "association": {
-                        "connectionType": "HAS_MANY",
-                        "associatedWith": "urlID"
-                    }
+                    "attributes": []
+                },
+                "url": {
+                    "name": "url",
+                    "isArray": false,
+                    "type": "String",
+                    "isRequired": false,
+                    "attributes": []
                 },
                 "createdAt": {
                     "name": "createdAt",
@@ -49,7 +49,7 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "URLS",
+            "pluralName": "Customers",
             "attributes": [
                 {
                     "type": "model",
@@ -73,8 +73,8 @@ export const schema = {
                 }
             ]
         },
-        "CUSTOMER": {
-            "name": "CUSTOMER",
+        "Todo": {
+            "name": "Todo",
             "fields": {
                 "id": {
                     "name": "id",
@@ -87,28 +87,14 @@ export const schema = {
                     "name": "name",
                     "isArray": false,
                     "type": "String",
-                    "isRequired": false,
+                    "isRequired": true,
                     "attributes": []
                 },
-                "other": {
-                    "name": "other",
+                "description": {
+                    "name": "description",
                     "isArray": false,
                     "type": "String",
                     "isRequired": false,
-                    "attributes": []
-                },
-                "payload": {
-                    "name": "payload",
-                    "isArray": false,
-                    "type": "AWSJSON",
-                    "isRequired": false,
-                    "attributes": []
-                },
-                "urlID": {
-                    "name": "urlID",
-                    "isArray": false,
-                    "type": "ID",
-                    "isRequired": true,
                     "attributes": []
                 },
                 "createdAt": {
@@ -129,20 +115,11 @@ export const schema = {
                 }
             },
             "syncable": true,
-            "pluralName": "CUSTOMERS",
+            "pluralName": "Todos",
             "attributes": [
                 {
                     "type": "model",
                     "properties": {}
-                },
-                {
-                    "type": "key",
-                    "properties": {
-                        "name": "byURL",
-                        "fields": [
-                            "urlID"
-                        ]
-                    }
                 },
                 {
                     "type": "auth",
@@ -165,5 +142,5 @@ export const schema = {
     },
     "enums": {},
     "nonModels": {},
-    "version": "75d257554e3a89397bd1c0c6db2564c9"
+    "version": "e826609fdaef2f6b7063dcbe1eef9245"
 };

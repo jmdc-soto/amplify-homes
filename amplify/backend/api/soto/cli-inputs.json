@@ -3,21 +3,21 @@
   "serviceConfiguration": {
     "apiName": "soto",
     "serviceName": "AppSync",
-    "gqlSchemaPath": "/tmp/amplify-69e5bf64-a3b8-4320-ae4e-fb8792429624/amplify/backend/api/soto/schema.graphql",
+    "gqlSchemaPath": "/tmp/amplify-82e7872e-c430-47fd-9da2-78692c653332/amplify/backend/api/soto/schema.graphql",
     "defaultAuthType": {
       "mode": "API_KEY",
       "keyDescription": "api key description",
       "expirationTime": 30
     },
-    "additionalAuthTypes": [
-      {
-        "mode": "AWS_IAM"
-      }
-    ],
     "conflictResolution": {
       "defaultResolutionStrategy": {
         "type": "AUTOMERGE"
       }
-    }
+    },
+    "additionalAuthTypes": [
+      {
+        "mode": "AWS_IAM"
+      }
+    ]
   }
 }
