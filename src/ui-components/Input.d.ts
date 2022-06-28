@@ -6,8 +6,11 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
+import { Customer } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type InputProps = React.PropsWithChildren<Partial<ViewProps> & {
+    customer?: Customer;
+} & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
 export default function Input(props: InputProps): React.ReactElement;

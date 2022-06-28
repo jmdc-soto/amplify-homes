@@ -6,18 +6,10 @@
 
 /* eslint-disable */
 import React from "react";
-import {
-  getOverrideProps,
-  useNavigateAction,
-} from "@aws-amplify/ui-react/internal";
+import { getOverrideProps } from "@aws-amplify/ui-react/internal";
 import { Button, TextField, View } from "@aws-amplify/ui-react";
 export default function Customer(props) {
-  const { cUSTOMER, uRL, overrides, ...rest } = props;
-  const buttonThreeTwoOneFiveTwoSevenZeroZeroOnClick = useNavigateAction({
-    target: "_blank",
-    type: "url",
-    url: "",
-  });
+  const { overrides, ...rest } = props;
   return (
     <View
       width="489px"
@@ -45,7 +37,6 @@ export default function Customer(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={cUSTOMER?.name}
         {...getOverrideProps(overrides, "TextField32132701")}
       ></TextField>
       <TextField
@@ -64,7 +55,6 @@ export default function Customer(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={uRL?.URL}
         {...getOverrideProps(overrides, "TextField32132708")}
       ></TextField>
       <TextField
@@ -83,7 +73,6 @@ export default function Customer(props) {
         isDisabled={false}
         labelHidden={false}
         variation="default"
-        value={cUSTOMER?.other}
         {...getOverrideProps(overrides, "TextField32132715")}
       ></TextField>
       <Button
@@ -99,9 +88,6 @@ export default function Customer(props) {
         isDisabled={false}
         variation="primary"
         children="ぼたん"
-        onClick={() => {
-          buttonThreeTwoOneFiveTwoSevenZeroZeroOnClick();
-        }}
         {...getOverrideProps(overrides, "Button32152700")}
       ></Button>
       <Button

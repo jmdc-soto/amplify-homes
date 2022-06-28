@@ -13,9 +13,10 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Customer } from "../models";
 import { schema } from "../models/schema";
+import { useEffect } from "react";
 import { Button, TextField, View } from "@aws-amplify/ui-react";
 export default function Input(props) {
-  const { overrides, ...rest } = props;
+  const { customer, overrides, ...rest } = props;
   const [
     textFieldThreeTwoThreeZeroTwoSevenFourTwoValue,
     setTextFieldThreeTwoThreeZeroTwoSevenFourTwoValue,
@@ -37,6 +38,22 @@ export default function Input(props) {
     model: Customer,
     schema: schema,
   });
+  useEffect(() => {
+    if (
+      textFieldThreeTwoThreeZeroTwoSevenFiveSixValue === "" &&
+      customer !== undefined &&
+      customer?.name !== undefined
+    )
+      setTextFieldThreeTwoThreeZeroTwoSevenFiveSixValue(customer?.name);
+  }, [customer]);
+  useEffect(() => {
+    if (
+      textFieldThreeTwoThreeZeroTwoSevenFourNineValue === "" &&
+      customer !== undefined &&
+      customer?.url !== undefined
+    )
+      setTextFieldThreeTwoThreeZeroTwoSevenFourNineValue(customer?.url);
+  }, [customer]);
   return (
     <View
       width="475px"

@@ -10,13 +10,13 @@ import {
   getOverrideProps,
   useNavigateAction,
 } from "@aws-amplify/ui-react/internal";
-import { Button, Radio, View } from "@aws-amplify/ui-react";
+import { Button, Radio, TextField, View } from "@aws-amplify/ui-react";
 export default function CustomerList(props) {
-  const { customer, cUSTOMER, overrides, ...rest } = props;
+  const { customer, overrides, ...rest } = props;
   const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <View
-      width="522px"
+      width="848px"
       height="73px"
       overflow="hidden"
       position="relative"
@@ -29,7 +29,7 @@ export default function CustomerList(props) {
         display="flex"
         gap="16px"
         position="absolute"
-        top="19px"
+        top="23px"
         left="23px"
         direction="row"
         justifyContent="center"
@@ -39,14 +39,14 @@ export default function CustomerList(props) {
         defaultChecked={true}
         isDisabled={false}
         labelPosition="end"
-        children={cUSTOMER?.name}
+        children={customer?.name}
         {...getOverrideProps(overrides, "Radio")}
       ></Radio>
       <Button
         display="flex"
         gap="0"
         position="absolute"
-        top="21px"
+        top="18px"
         right="25px"
         direction="row"
         justifyContent="center"
@@ -60,6 +60,24 @@ export default function CustomerList(props) {
         }}
         {...getOverrideProps(overrides, "Button")}
       ></Button>
+      <TextField
+        display="flex"
+        gap="8px"
+        position="absolute"
+        top="18px"
+        left="250px"
+        direction="column"
+        width="503px"
+        height="39px"
+        padding="0px 0px 0px 0px"
+        placeholder="Placeholder"
+        size="default"
+        isDisabled={true}
+        labelHidden={true}
+        variation="default"
+        value={customer?.url}
+        {...getOverrideProps(overrides, "TextField")}
+      ></TextField>
     </View>
   );
 }

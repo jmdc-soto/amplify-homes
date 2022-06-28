@@ -6,11 +6,10 @@
 
 import React from "react";
 import { EscapeHatchProps } from "@aws-amplify/ui-react/internal";
-import { CUSTOMER } from "../models";
+import { Customer } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type CustomerListProps = React.PropsWithChildren<Partial<ViewProps> & {
-    customer?: String;
-    cUSTOMER?: CUSTOMER;
+    customer?: Customer;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;
