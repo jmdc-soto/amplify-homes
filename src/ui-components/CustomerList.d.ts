@@ -10,6 +10,7 @@ import { Customer } from "../models";
 import { ViewProps } from "@aws-amplify/ui-react";
 export declare type CustomerListProps = React.PropsWithChildren<Partial<ViewProps> & {
     customer?: Customer;
+    selected?: Customer;
 } & {
     overrides?: EscapeHatchProps | undefined | null;
 }>;

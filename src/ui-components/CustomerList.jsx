@@ -12,7 +12,7 @@ import {
 } from "@aws-amplify/ui-react/internal";
 import { Button, Radio, TextField, View } from "@aws-amplify/ui-react";
 export default function CustomerList(props) {
-  const { customer, overrides, ...rest } = props;
+  const { customer, selected, overrides, ...rest } = props;
   const buttonOnClick = useNavigateAction({ type: "url", url: "" });
   return (
     <View

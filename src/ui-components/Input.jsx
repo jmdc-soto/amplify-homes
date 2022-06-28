@@ -46,14 +46,6 @@ export default function Input(props) {
     )
       setTextFieldThreeTwoThreeZeroTwoSevenFiveSixValue(customer?.name);
   }, [customer]);
-  useEffect(() => {
-    if (
-      textFieldThreeTwoThreeZeroTwoSevenFourNineValue === "" &&
-      customer !== undefined &&
-      customer?.url !== undefined
-    )
-      setTextFieldThreeTwoThreeZeroTwoSevenFourNineValue(customer?.url);
-  }, [customer]);
   return (
     <View
       width="475px"
